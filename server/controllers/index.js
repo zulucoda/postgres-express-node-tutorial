@@ -4,7 +4,9 @@
  * Copyright zulucoda - mfbproject
  */
 const italianCarManufactures = require('./italian-car-manufactures');
+const italianCarsController = require('./italian-cars-controller');
 
 module.exports = {
-  italianCarManufactures
-}
+  italianCarManufactures,
+  italianCarsController
+};

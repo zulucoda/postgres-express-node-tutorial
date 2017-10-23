@@ -5,6 +5,7 @@
  */
 'use strict'
 const italianCarManufacturesController = require('../controllers').italianCarManufactures;
+const italianCarsController = require('../controllers').italianCarsController;
 
 module.exports = app => {
   app.get('/api', (req, res) => res.status(200).send({
@@ -13,4 +14,7 @@ module.exports = app => {
 
   app.post('/api/italian-car-manufactures', italianCarManufacturesController.create);
   app.get('/api/italian-car-manufactures', italianCarManufacturesController.list);
+
+  app.post('/api/:italianCarManufactureId/cars', italianCarsController.create);
+
 };
