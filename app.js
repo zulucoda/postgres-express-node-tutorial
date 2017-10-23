@@ -13,6 +13,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 
+require('./server/routes')(app);
 //setup default catch-all route
 app.get('*', (req, res) => res.status(200).send({
   message: 'zulucoda express up and running!!!'
