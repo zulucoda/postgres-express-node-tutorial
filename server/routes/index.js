@@ -14,6 +14,7 @@ module.exports = app => {
 
   app.post('/api/italian-car-manufactures', italianCarManufacturesController.create);
   app.get('/api/italian-car-manufactures', italianCarManufacturesController.list);
+  app.get('/api/italian-car-manufactures/:italianCarManufactureId', italianCarManufacturesController.retrieve);
 
   app.post('/api/:italianCarManufactureId/cars', italianCarsController.create);
 

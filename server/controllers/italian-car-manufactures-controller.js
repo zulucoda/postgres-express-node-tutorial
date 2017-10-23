@@ -27,5 +27,23 @@ module.exports = {
       })
       .then(data => res.status(200).send(data))
       .catch(error => res.status(400).send(error));
+  },
+  retrieve(req, res){
+    return ItalianCarManufacture
+      .findById(req.params.italianCarManufactureId, {
+        include: [{
+          model: ItalianCar,
+          as: 'italianCars'
+        }]
+      })
+      .then(data => {
+        if(!data){
+          return res.status(404).send({
+            message: 'Italian Car Manufacture Not Found'
+          });
+        }
+        return res.status(200).send(data);
+      })
+      .catch(error => res.status(400).send(error));
   }
 };
