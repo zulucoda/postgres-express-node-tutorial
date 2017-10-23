@@ -12,4 +12,5 @@ module.exports = app => {
   }));
 
   app.post('/api/italian-car-manufactures', italianCarManufacturesController.create);
+  app.get('/api/italian-car-manufactures', italianCarManufacturesController.list);
 };
