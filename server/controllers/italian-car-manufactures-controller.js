@@ -5,11 +5,12 @@
  */
 'use strict'
 
-const ItalianCarManufactures = require('../models').ItalianCarManufacture;
+const ItalianCarManufacture = require('../models').ItalianCarManufacture;
+const ItalianCar = require('../models').ItalianCar;
 
 module.exports = {
   create(req, res){
-    return ItalianCarManufactures
+    return ItalianCarManufacture
       .create({
         title: req.body.title
       })
@@ -17,8 +18,13 @@ module.exports = {
       .catch(error => res.status(400).send(error));
   },
   list(req, res){
-    return ItalianCarManufactures
-      .all()
+    return ItalianCarManufacture
+      .findAll({
+        include: [{
+          model: ItalianCar,
+          as: 'italianCars'
+        }]
+      })
       .then(data => res.status(200).send(data))
       .catch(error => res.status(400).send(error));
   }

@@ -3,7 +3,7 @@
  * Copyright mfbproject.co.za - muzi@mfbproject.co.za
  * Copyright zulucoda - mfbproject
  */
-const italianCarManufactures = require('./italian-car-manufactures');
+const italianCarManufactures = require('./italian-car-manufactures-controller');
 const italianCarsController = require('./italian-cars-controller');
 
 module.exports = {
