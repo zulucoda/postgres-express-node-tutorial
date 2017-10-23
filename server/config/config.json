@@ -1,16 +1,16 @@
 {
   "development": {
-    "username": "muzikayise",
-    "password": null,
-    "database": "todos-dev",
+    "username": "postgres",
+    "password": "sa",
+    "database": "italian-car-manufactures-dev",
     "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"
   },
   "test": {
-    "username": "muzikayise",
-    "password": null,
-    "database": "todos-test",
+    "username": "postgres",
+    "password": "sa",
+    "database": "italian-car-manufactures-test",
     "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"
